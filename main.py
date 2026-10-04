@@ -1,4 +1,5 @@
 import cv2
+import mediapipe as mp
 
 camera = cv2.VideoCapture(0)
 
@@ -16,3 +17,8 @@ while read:
 
 RGB = cv2.cvtColor(storage, cv2.COLOR_BGR2RGB)
 
+mp_hands = mp.solutions.Hands
+
+hands = mp_hands.Hands()
+
+resultats = hands.process(RGB)
