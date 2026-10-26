@@ -3,7 +3,7 @@ import mediapipe as mp
 import serial
 import time
 
-PORT_SERIE = "COM3"
+PORT_SERIE = "/dev/ttyACM0"
 
 camera = cv2.VideoCapture(0)
 arduino = serial.Serial(PORT_SERIE, 9600, timeout=1)
